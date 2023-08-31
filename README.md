@@ -3,9 +3,17 @@
 ### Cơ bản
 
     1.  Hướng đối tượng có bao nhiêu tính chất? Các tính chất đó là gì?
+    có 4 tính chất của hướng đối tượng:
+    - tính đóng gói
+    - tính đa hình
+    - tính trừu tượng
+    - tính kế thừa
     2.  Đối tượng là gì?
+    là một object ngoài đời thực được mô với các hành vi và thuộc tính
     3.  Class là gì?
+    là một lớp dùng để mô tả các đối tượng ngoài đời thực vào lập trình: với hành vi là các menthod, thuộc tính là properties.
     4.  Cho các ví dụ thực tế về đa hình trong hướng đối tượng?
+    ví dụ một contructor init trong swift thì đa hình nó sẽ là có cùng một tên init nhưng lại có nhiều cách init khác nhau, tuỳ thuộc vào định nghĩa của     lập trình viên
     5.  CRUD là gì?
     6.  Trình bày về hiểu biết của em cho các hệ quản trị cở sở dữ liệu?
     7.  …
@@ -13,13 +21,35 @@
 ### Junior & middle
 
     1.  Kế thừa trong Switf là đơn hay đa thừa kế? Muốn đa thừa kế thì phải như thế nào?
+    swift là đơn kế thừa, không thể kế thừa nhiều class với nhau được, thay oop bằng pop sẽ cho kế thừa nhiều protocol
     2.  Hướng đối tượng trong Swift có tính trừu tượng hay không?
+    không, tính trừu tượng khai báo các phương thức và thuộc tính chứ k định nghĩa nó ra. swift không hỗ trợ tính trừu tượng trực tiếp, nhưng thay vào       đó chúng ta dùng protocol để triển khai chúng. 
     3.  Class & struct khác nhau như thế nào?
+    - tính kế thừa
+    - type: value type, reference type
+    - hiệu suất truy suất: struct > class
     4.  Có bao nhiêu mức Access Control trong Swift? Hãy liệt kê chúng theo thứ tự giảm dần?
+    có 5 mức: private, fileprivate, internal, public, open
+        import MyModule
+        func main() {
+            // Khởi tạo các lớp và gọi các phương thức
+            let privateInstance = PrivateClass()  // Lỗi: privateClass không thể truy cập từ module khác
+            let fileprivateInstance = FilePrivateClass()  // Lỗi: fileprivateClass không thể truy cập từ module khác
+            let internalInstance = InternalClass()
+            let publicInstance = PublicClass()
+            let openInstance = OpenClass()
+            
+            internalInstance.internalMethod()
+            publicInstance.publicMethod()
+            openInstance.openMethod()
+        }
+    
     5.  Quản lý bộ nhớ trong iOS như thế nào?
+    
     6.  Property Wrappers trong Swift là gì? Liệt kê các loại Wrapper bạn hay sử dụng?
     7.  ARC và non-ARC là gì ( Automatic Reference Counting )?
     8.  Strong và weak là gì?
+    
     9.  Trình bày iOS Application Lifecycle?
     10.  Sự khác nhau của AppDelegate & SenceDelegate?
     11.  Trình bày về mô mình MVC & MVVM trong iOS & Swift?
